@@ -21,7 +21,7 @@ const StyledButton = styled.button`
     }
 
     ${({ bold }) => bold && `
-        font-weight: bold;
+        font-weight: 600;
     `}
 `
 

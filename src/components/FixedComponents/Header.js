@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
 import colors from '../Styled/colors'
-import { Row, Column, AlignedCenterRow, FullyCentralizedColumn } from '../Styled/utils'
+import { Column, AlignedCenterRow, FullyCentralizedColumn } from '../Styled/utils'
 
 export default function Header() {
     const hamburger = useRef(null)
@@ -99,7 +99,7 @@ const MenuItem = styled.span`
     color: ${colors().white};
     font-size: 1.3em;
     padding: 15px 5px;
-    font-weight: bold;
+    font-weight: 600;
 
     @media screen and (min-width: 800px){
         font-size: .9em;

@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createGlobalStyle } from 'styled-components'
-import colors from './styled/colors';
+
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Poppins', sans-serif;
         -webkit-font-smoothing: antialiased;
     }
 
