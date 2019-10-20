@@ -26,7 +26,6 @@ export default function Header() {
                 <MenuItem>Sobre</MenuItem>
                 <MenuItem>Talks</MenuItem>
                 <MenuItem>Parceiros</MenuItem>
-                {/* <MenuItem>Github</MenuItem> */}
             </MenuItems>
 
         </HeaderContainer>
@@ -79,6 +78,7 @@ const MenuItems = styled(FullyCentralizedColumn)`
     opacity: .95;
     background: ${colors().primaryColor};
     display: none;
+    z-index: 5;
 
     &.visible{ 
         display: flex; 
@@ -100,6 +100,22 @@ const MenuItem = styled.span`
     font-size: 1.3em;
     padding: 15px 5px;
     font-weight: 600;
+    cursor: pointer;
+    
+    &:after{
+        background: ${colors().white};
+        content: '';
+        display: block;
+        height: 2px;
+        margin: auto;
+        transition: width .4s ease, background-color .5s ease;
+        width: 0px;
+    }
+    
+    &:hover:after{
+        background: ${colors().white};
+        width: 100%;
+    }
 
     @media screen and (min-width: 800px){
         font-size: .9em;

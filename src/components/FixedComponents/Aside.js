@@ -43,6 +43,11 @@ const AsideItem = styled.a`
     padding: 35px;
     cursor: pointer;
     z-index: 5;
+    transition: ease-in-out .25s;
+
+    &:hover{
+        transform: scale(1.25);    
+    }
 
     @media screen and (min-width: 1280px){
         padding: 40px;
@@ -52,11 +57,6 @@ const AsideItem = styled.a`
 
 const SocialIcon = styled.img`
     width: 30px;
-    transition: ease-in-out .25s;
-
-    &:hover{
-        transform: scale(1.25);    
-    }
 
     @media screen and (min-width: 1280px){
         width: 35px;

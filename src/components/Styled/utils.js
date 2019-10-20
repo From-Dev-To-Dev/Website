@@ -27,6 +27,10 @@ export const FullyCentralizedRow = styled(Row)`
     justify-content: center;
 `
 
+export const AlignedCenterColumn = styled(Column)`
+    align-items: center;
+`
+
 export const FullyCentralizedColumn = styled(Column)`
     align-items: center;
     justify-content: center;
