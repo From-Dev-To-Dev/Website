@@ -1,10 +1,9 @@
 import React from 'react'
+import Home from './screens/Home'
 
 function App() {
   return (
-    <div>
-      <h1> From dev to dev </h1>
-    </div>
+    <Home />
   )
 }
 

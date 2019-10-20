@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createGlobalStyle } from 'styled-components'
-import colors from './components/theme/colors';
+import colors from './styled/colors';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
         -webkit-font-smoothing: antialiased;
-        color: ${colors().grayFont}
     }
 
     a {
