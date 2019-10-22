@@ -5,12 +5,12 @@ import { FullyCentralizedColumn } from '../Styled/utils'
 import StyledButton from '../Styled/StyledButton'
 
 export default function MainContent() {
-    return (
+    return ( 
         <Main>
 
             <MainLogo src={'/imgs/white-logo.png'} />
-
-            <MainDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque scelerisque quam tempus facilisis scelerisque.</MainDescription>
+ 
+            <MainDescription>Evento destinado ao fortalecimento do ecossistema de TI de Pelotas e região por meio da troca de conhecimentos e networking.</MainDescription>
 
             <ButtonContainer>
                 <StyledButton bold width={'90%'}>Participe Já</StyledButton>

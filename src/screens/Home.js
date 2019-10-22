@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Background from '../components/Home/Background'
 import MainContent from '../components/Home/MainContent'
-import Countdown from '../components/Home/Countdown'
+import DaysCountdown from '../components/Home/DaysCountdown'
+import AboutDescription from '../components/About/AboutDescription'
 
 export default function Home() {
     return (
@@ -12,7 +13,9 @@ export default function Home() {
                 <MainContent />
             </Container>
             
-            <Countdown />
+            <DaysCountdown />
+            
+            <AboutDescription />
         </>
     )
 }

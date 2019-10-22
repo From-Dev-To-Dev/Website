@@ -2,34 +2,50 @@ import React from 'react'
 import styled from 'styled-components'
 import colors from '../Styled/colors'
 import { FullyCentralizedRow, AlignedCenterColumn, FullyCentralizedColumn } from '../Styled/utils'
+import Countdown from 'react-countdown-now'
+import dayjs from 'dayjs'
 
-export default function Countdown() {
+export default function DaysCountdown() {
+
+    const renderer = ({ days, hours, minutes, seconds, completed }) => {
+        if (completed) {
+            return <span>completed</span>
+        } else {
+            return (
+                <CountdownContainer>
+
+                    <CountdownItems>
+                        <CountdownItem>
+                            <CountdownValue>{days}</CountdownValue>
+                            <CountdownLabel>Dias</CountdownLabel>
+                        </CountdownItem>
+
+                        <CountdownItem>
+                            <CountdownValue>{hours}</CountdownValue>
+                            <CountdownLabel>Horas</CountdownLabel>
+                        </CountdownItem>
+
+                        <CountdownItem>
+                            <CountdownValue>{minutes}</CountdownValue>
+                            <CountdownLabel>Minutos</CountdownLabel>
+                        </CountdownItem>
+
+                        <CountdownItem>
+                            <CountdownValue>{seconds}</CountdownValue>
+                            <CountdownLabel>Segundos</CountdownLabel>
+                        </CountdownItem>
+                    </CountdownItems>
+
+                </CountdownContainer>
+            )
+        }
+    }
+
     return (
-        <CountdownContainer>
-
-            <CountdownItems>
-                <CountdownItem>
-                    <CountdownValue>46</CountdownValue>
-                    <CountdownLabel>Dias</CountdownLabel>
-                </CountdownItem>
-
-                <CountdownItem>
-                    <CountdownValue>07</CountdownValue>
-                    <CountdownLabel>Horas</CountdownLabel>
-                </CountdownItem>
-
-                <CountdownItem>
-                    <CountdownValue>03</CountdownValue>
-                    <CountdownLabel>Minutos</CountdownLabel>
-                </CountdownItem>
-
-                <CountdownItem>
-                    <CountdownValue>49</CountdownValue>
-                    <CountdownLabel>Segundos</CountdownLabel>
-                </CountdownItem>
-            </CountdownItems>
-
-        </CountdownContainer>
+        <Countdown
+            date={ dayjs() + 999999992} 
+            renderer={renderer}
+        />
     )
 }
 
