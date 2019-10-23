@@ -28,7 +28,7 @@ export default function AboutDescription() {
 const DescriptionContainer = styled(Column)`
     width: 100%;
     padding: 30px;
-    background: ${colors().primaryColor};
+    background: linear-gradient(0deg, rgba(101,61,191,1) 17%, rgba(26,93,192,1) 100%);
 
     @media screen and (min-width: 800px){
         background: ${colors().white};
@@ -139,6 +139,14 @@ const DescriptionImage = styled.img`
     box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
     position: absolute;
     transition: all .5s;
+
+    
+    &:before{
+        content: '';
+        z-index: 5;
+        opacity: 1;
+        background: ${colors().primaryColor};
+    }
 
     &:hover{
         transform: scale(1.2);

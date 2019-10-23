@@ -8,9 +8,9 @@ export default function Supporters() {
     const partners = [
         { name: 'Faculdade Senac', prefix: 'faculdade_senac.png', link: 'https://www.senacrs.com.br/unidades.asp?unidade=78' },
         { name: 'OmixData', prefix: 'omixdata-logo.png', link: 'http://omixdata.com' },
-        { name: 'SunHill', prefix: '#', link: 'https://www.instagram.com/sunhillstudios/' },
-        { name: '', prefix: '', link: '' },
-        { name: '', prefix: '', link: '' },
+        { name: 'Brainny', prefix: 'brainny.png', link: 'https://brainny.cc' },
+        { name: 'SunHill', prefix: 'SunHillStudios.png', link: 'https://www.instagram.com/sunhillstudios/' },
+        // { name: '', prefix: '', link: '' },
     ]
 
     return (
@@ -37,24 +37,24 @@ const PartnersContainer = styled(Column)`
     padding: 30px;
     
     @media screen and (min-width: 800px){
-        padding: 60px 50px;
+        padding:50px;
     }
 
     @media screen and (min-width: 1220px){
-        padding: 90px;
+        padding: 50px 90px;
     }
 
 
     @media screen and (min-width: 1440px){
-        padding: 100px 180px;
+        padding: 50px 180px;
     }
 
     @media screen and (min-width: 1600px){
-        padding: 100px 170px;
+        padding: 50px 170px;
     }
 
     @media screen and (min-width: 1830px){
-        padding: 100px 290px;
+        padding: 50px 290px;
     }
 `
 
