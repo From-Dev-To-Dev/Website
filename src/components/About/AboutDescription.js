@@ -27,7 +27,7 @@ export default function AboutDescription() {
 
 const DescriptionContainer = styled(Column)`
     width: 100%;
-    padding: 30px 30px;
+    padding: 30px;
     background: ${colors().primaryColor};
 
     @media screen and (min-width: 800px){
@@ -69,10 +69,11 @@ const DescriptionTextContainer = styled(Column)`
 `
 
 const DescriptionTitle = styled.h1`
-    font-size: 1.5em;
-    color: ${colors().white};
+    font-size: 1.2em;
     font-weight: 600;
+    color: ${colors().white};
     position: relative;
+    text-transform: uppercase;
 
     &:after{
         content: '';
@@ -86,7 +87,7 @@ const DescriptionTitle = styled.h1`
 
     @media screen and (min-width: 800px){
         color: ${colors().primaryColor};
-        font-size: 1.7em;
+        font-size: 1.6em;
 
         &:after{
             background: ${colors().primaryColor};

@@ -42,6 +42,7 @@ const HeaderContainer = styled(AlignedCenterRow)`
     top: 0;
     width: 100%;
     z-index: 9999;
+    background: rgba(0, 0, 0, .85);
 `
 
 const Logo = styled.img`

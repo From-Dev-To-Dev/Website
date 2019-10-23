@@ -4,6 +4,9 @@ import Background from '../components/Home/Background'
 import MainContent from '../components/Home/MainContent'
 import DaysCountdown from '../components/Home/DaysCountdown'
 import AboutDescription from '../components/About/AboutDescription'
+import { Column } from '../components/Styled/utils'
+import Supporters from '../components/Partners/Supporters'
+import Sponsors from '../components/Partners/Sponsors'
 
 export default function Home() {
     return (
@@ -16,6 +19,11 @@ export default function Home() {
             <DaysCountdown />
             
             <AboutDescription />
+
+            <PartnersContainer>
+                <Sponsors />
+                <Supporters />
+            </PartnersContainer>
         </>
     )
 }
@@ -27,4 +35,8 @@ const Container = styled.div`
     height: 100vh;
     display: flex;
     position: relative;
+`
+
+const PartnersContainer = styled(Column)`
+    /* padding: 30px; */
 `
