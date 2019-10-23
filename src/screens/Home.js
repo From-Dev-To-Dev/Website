@@ -4,6 +4,7 @@ import Background from '../components/Home/Background'
 import MainContent from '../components/Home/MainContent'
 import DaysCountdown from '../components/Home/DaysCountdown'
 import AboutDescription from '../components/About/AboutDescription'
+import Timeline from '../components/Timeline/Timeline'
 
 export default function Home() {
     return (
@@ -16,6 +17,8 @@ export default function Home() {
             <DaysCountdown />
             
             <AboutDescription />
+
+            <Timeline />
         </>
     )
 }

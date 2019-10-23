@@ -22,6 +22,10 @@ export const JustifyCenterRow = styled(Row)`
     justify-content: center;
 `
 
+export const JustifySpaceBetweenRow = styled(Row)`
+    justify-content: space-between;
+`
+
 export const FullyCentralizedRow = styled(Row)`
     align-items: center;
     justify-content: center;
