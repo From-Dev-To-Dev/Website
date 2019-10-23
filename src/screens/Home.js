@@ -7,6 +7,7 @@ import AboutDescription from '../components/About/AboutDescription'
 import { Column } from '../components/Styled/utils'
 import Supporters from '../components/Partners/Supporters'
 import Sponsors from '../components/Partners/Sponsors'
+import Timeline from '../components/Timeline'
 
 export default function Home() {
     return (
@@ -24,6 +25,7 @@ export default function Home() {
                 <Sponsors />
                 <Supporters />
             </PartnersContainer>
+            <Timeline />
         </>
     )
 }
