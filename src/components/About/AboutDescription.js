@@ -139,7 +139,7 @@ const DescriptionImage = styled.img`
     box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
     position: absolute;
     transition: all .5s;
-
+    outline: .2rem solid transparent;
     
     &:before{
         content: '';
@@ -151,7 +151,8 @@ const DescriptionImage = styled.img`
     &:hover{
         transform: scale(1.2);
         box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
-        /* outline: .2rem solid ${colors().secondaryColor}; */
+        outline-offset: 10px;
+        outline: .2rem solid ${colors().secondaryColor};
     }
 
     @media screen and (min-width: 1220px){

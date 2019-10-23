@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import colors from '../Styled/colors'
-import { FullyCentralizedRow, AlignedCenterColumn, FullyCentralizedColumn } from '../Styled/utils'
+import { FullyCentralizedRow, FullyCentralizedColumn } from '../Styled/utils'
 import Countdown from 'react-countdown-now'
 import dayjs from 'dayjs'
 
