@@ -45,15 +45,15 @@ const DescriptionContainer = styled(Column)`
 
 
     @media screen and (min-width: 1440px){
-        padding: 70px 180px;
+        padding: 100px 180px;
     }
 
     @media screen and (min-width: 1600px){
-        padding: 70px 170px;
+        padding: 100px 170px;
     }
 
     @media screen and (min-width: 1830px){
-        padding: 70px 290px;
+        padding: 100px 290px;
     }
 `
 
@@ -141,7 +141,6 @@ const DescriptionImage = styled.img`
 
     &:hover{
         transform: scale(1.2);
-        z-index: 20;
         box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
         /* outline: .2rem solid ${colors().secondaryColor}; */
     }
@@ -150,11 +149,20 @@ const DescriptionImage = styled.img`
         width: 179px;
         height: 130px;
     }
+
+    @media screen and (min-width: 1360px){
+        width: 230px;
+        height: 160px;
+    }
     
     &:nth-child(1){
         right: 30px;
         bottom: 30px;
         z-index: 1;
+
+        &:hover{
+            z-index: 20;
+        }
        
         @media screen and (min-width: 830px){
             right: 100px;
@@ -176,8 +184,12 @@ const DescriptionImage = styled.img`
             right: 240px;
         }
 
+        @media screen and (min-width: 1360px){
+            right: 190px;
+        }
+
         @media screen and (min-width: 1440px){
-            right: 200px;
+            right: 90px;
         }
 
         @media screen and (min-width: 1600px){
@@ -194,27 +206,45 @@ const DescriptionImage = styled.img`
         top: 0;
         z-index: 3;
 
+        &:hover{
+            z-index: 20;
+        }
+
         @media screen and (min-width: 1450px){
             left: 180px;
         }
 
+        @media screen and (min-width: 1360px){
+            left: 150px;
+        }
+
+        @media screen and (min-width: 1360px){
+            left: 100px;
+        }
+
         @media screen and (min-width: 1600px){
-            left: 200px;
+            left: 130px;
         }
 
         @media screen and (min-width: 1680px){
-            left: 230px;
+            left: 170px;
         }
 
-        @media screen and (min-width: 1760px){
+        /* @media screen and (min-width: 1760px){
             left: 270px;
-        }
+        } */
     }
 
     &:nth-child(3){
         right: 40px;
         top: 70px;
         z-index: 2;
+
+        &:hover{
+            z-index: 20;
+        }
+
+
         @media screen and (min-width: 830px){
             right: 90px;
         }
@@ -235,12 +265,16 @@ const DescriptionImage = styled.img`
             right: 250px;
         }
 
+        @media screen and (min-width: 1360px){
+            right: 150px;
+        }
+
         @media screen and (min-width: 1440px){
-            right: 210px;
+            right: 110px;
         }
 
         @media screen and (min-width: 1600px){
-            right: 200px;
+            right: 150px;
         }
     }
 `
