@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { JustifySpaceBetweenRow, Row, AlignedCenterRow, Column } from '../Styled/utils'
+import { JustifySpaceBetweenRow, AlignedCenterRow, Column } from '../Styled/utils'
 import color from '../Styled/colors'
 
 export default function Timeline() {
@@ -8,6 +8,11 @@ export default function Timeline() {
         { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
         { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
         { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: true },
+        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
+        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
+        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
+        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
+        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
         { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
         
     ]
@@ -42,7 +47,7 @@ export default function Timeline() {
 const TimelineContainer = styled.div`
   width: 100%;
   overflow: auto;
-  padding: 30px;
+  padding: 20px 0px;
     
     @media screen and (min-width: 800px){
         padding:50px;
@@ -68,8 +73,8 @@ const TimelineContainer = styled.div`
 
 const TimelineList = styled(AlignedCenterRow)`
     width: 100%;
-    height: 100%;
     justify-content: center;
+    overflow-x: auto;
 `
 const TimelineItem = styled(Column)`
     width: 210px;

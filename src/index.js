@@ -1,9 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 import { createGlobalStyle } from 'styled-components'
+import * as firebase from 'firebase/app'
+import 'firebase/firestore'
+import firebaseConfig from './config/firebase'
 
+// Your web app's Firebase configuration
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');

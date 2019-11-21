@@ -1,17 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Column, Row } from '../Styled/utils'
 import colors from '../Styled/colors'
 
-export default function Supporters() {
+import * as firebase from 'firebase/app'
+import 'firebase/firestore'
 
-    const partners = [
-        { name: 'Faculdade Senac', prefix: 'faculdade_senac.png', link: 'https://www.senacrs.com.br/unidades.asp?unidade=78' },
-        { name: 'OmixData', prefix: 'omixdata-logo.png', link: 'http://omixdata.com' },
-        { name: 'Brainny', prefix: 'brainny.png', link: 'https://brainny.cc' },
-        { name: 'SunHill', prefix: 'SunHillStudios.png', link: 'https://www.instagram.com/sunhillstudios/' },
-        // { name: '', prefix: '', link: '' },
-    ]
+export default function Supporters() {
+    const [partners, setPartners] = useState('')
+    
+    useEffect(() => {
+        getPartners()
+    }, [])
+
+    function getPartners() {
+        const arr = []
+        const db = firebase.firestore()
+
+       const docRef = db.collection('partners').orderBy('id')
+
+       docRef.get()
+       .then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc){
+                arr.push(doc.data()) 
+            })
+            setPartners(arr)
+            console.log(arr)
+        })
+        .catch(function(err) {
+            console.log(err)
+        })
+    }
+    
 
     return (
         <PartnersContainer>
@@ -20,9 +40,9 @@ export default function Supporters() {
 
             <PartnersContent>
                 {
-                    partners.map(el => (
-                        <SupporterItem href={ el.link } target="_blank">
-                            <SupporterIcon src={`/imgs/partners/${el.prefix}`} />
+                   partners && partners.map(el => (
+                        <SupporterItem Key={el.id} href={ el.link } target="_blank">
+                            <SupporterIcon src={`${el.image}`} />
                         </SupporterItem>
                     ))
                 }
