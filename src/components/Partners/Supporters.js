@@ -25,7 +25,6 @@ export default function Supporters() {
                 arr.push(doc.data()) 
             })
             setPartners(arr)
-            console.log(arr)
         })
         .catch(function(err) {
             console.log(err)
@@ -41,7 +40,7 @@ export default function Supporters() {
             <PartnersContent>
                 {
                    partners && partners.map(el => (
-                        <SupporterItem Key={el.id} href={ el.link } target="_blank">
+                        <SupporterItem key={el.id} href={ el.link } target="_blank">
                             <SupporterIcon src={`${el.image}`} />
                         </SupporterItem>
                     ))

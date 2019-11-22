@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Column, Row } from '../Styled/utils'
 import colors from '../Styled/colors'
 
-export default function Sponsors() {
+import * as firebase from 'firebase/app'
+import 'firebase/firestore'
 
-    const partners = [
-        { name: 'OmixData', prefix: 'omixdata-logo.png', link: 'http://omixdata.com' },
-    ]
+export default function Sponsors() {
+    const [sponsors, setSponsors] = useState([])
+
+    useEffect(() => {
+        getSponsors()
+    }, [])
+
+    function getSponsors() {
+        const arr = []
+        const db = firebase.firestore()
+
+       const docRef = db.collection('sponsors').orderBy('id')
+
+       docRef.get()
+       .then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc){
+                arr.push(doc.data()) 
+            })
+            setSponsors(arr)
+        })
+        .catch(function(err) {
+            console.log(err)
+        })
+    }
 
     return (
         <PartnersContainer>
@@ -16,9 +38,9 @@ export default function Sponsors() {
 
             <PartnersContent>
                 {
-                    partners.map(el => (
-                        <SupporterItem href={ el.link } target="_blank">
-                            <SupporterIcon src={`/imgs/partners/${el.prefix}`} />
+                    sponsors && sponsors.map(el => (
+                        <SupporterItem key={el.id} href={ el.link } target="_blank">
+                            <SupporterIcon src={`${el.image}`} />
                         </SupporterItem>
                     ))
                 }

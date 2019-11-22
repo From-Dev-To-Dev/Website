@@ -1,55 +1,69 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
+import * as firebase from 'firebase/app'
+import 'firebase/firestore'
+
+import TimelineDescription from './TimelineDescription'
+
 import { JustifySpaceBetweenRow, AlignedCenterRow, Column } from '../Styled/utils'
 import color from '../Styled/colors'
 
+
 export default function Timeline() {
-    const talks = [
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: true },
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
-        { name: 'Angelo Luz', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', photo: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/68340521_2354130401345677_4175575412853702656_o.jpg?_nc_cat=100&_nc_oc=AQlqTgwSA7XssKT_20zfPzAuZCLrAmb0DxkZANsNqr4cT92sLpDREoisFJlXoJwUUtk&_nc_ht=scontent-gru2-2.xx&oh=e5a96a6fbf06bfc13aa94e79bb030328&oe=5E2C73C2', active: false },
-        
-    ]
+    const [ speakers, setSpeakers ] = useState([])
+    
+    useEffect(() => {
+        getSpeakers()
+    }, [])
+    
+    function getSpeakers() {
+        const arr = []
+        const db = firebase.firestore()
+
+       const docRef = db.collection(' speakers').orderBy('id')
+
+       docRef.get()
+       .then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc){
+                arr.push(doc.data())
+            })
+            setSpeakers(arr)
+        })
+        .catch(function(err) {
+            console.log(err)
+        })
+    }
 
     return (
+        <>
         <TimelineContainer>
 
             <TimelineTitle>Palesteras</TimelineTitle>
 
             <TimelineList>
-                {
-                    talks.map(el => (
-                        <TimelineItem active={el.active}>
+                { speakers && speakers.map(el => (
+                        <TimelineItem key={el.id} active={el.active}>
                             <TimelineItemHeader>
-
-                                <TimelineHour> 18<span>h</span>30 </TimelineHour>
-                                <TimelineAvatar src={el.photo} />
+                                <TimelineHour> {el.hour}<span>h</span>{el.min} </TimelineHour>
+                                <TimelineAvatar src={el.avatar} />
                             </TimelineItemHeader>
 
                             <TimelineItemName>{el.name}</TimelineItemName>
-                            <TimelineItemDescription>{el.description}</TimelineItemDescription>
+                            <TimelineItemDescription>{el.tiny_description}</TimelineItemDescription>
 
                         </TimelineItem>
-
                     ))
                 }
             </TimelineList>
         </TimelineContainer>
+        <TimelineDescription />
+        </>
     )
 }
 
 const TimelineContainer = styled.div`
-  width: 100%;
-  overflow: auto;
-  padding: 20px 0px;
-    
-    @media screen and (min-width: 800px){
+    width: 100%;
+    /* @media screen and (min-width: 800px){
         padding:50px;
     }
 
@@ -68,13 +82,15 @@ const TimelineContainer = styled.div`
 
     @media screen and (min-width: 1830px){
         padding: 50px 290px;
-    }
+    } */
 `
 
 const TimelineList = styled(AlignedCenterRow)`
     width: 100%;
+    height: 300px;
     justify-content: center;
     overflow-x: auto;
+    z-index: 2;
 `
 const TimelineItem = styled(Column)`
     width: 210px;
@@ -147,6 +163,7 @@ const TimelineTitle = styled.h1`
     text-transform: uppercase;
     position: relative;
     margin-bottom: 70px;
+    padding: 20px 170px;
 
     &:after{
         content: '';
@@ -155,6 +172,7 @@ const TimelineTitle = styled.h1`
         left: 0%;
         width: 50px;
         height: 2px;
+        margin-left: 170px;
         background: ${color().primaryColor};
     }
 
