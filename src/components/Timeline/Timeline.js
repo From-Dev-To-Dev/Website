@@ -47,10 +47,8 @@ export default function Timeline() {
                                 <TimelineHour> {el.hour}<span>h</span>{el.min} </TimelineHour>
                                 <TimelineAvatar src={el.avatar} />
                             </TimelineItemHeader>
-
                             <TimelineItemName>{el.name}</TimelineItemName>
                             <TimelineItemDescription>{el.tiny_description}</TimelineItemDescription>
-
                         </TimelineItem>
                     ))
                 }
@@ -186,8 +184,3 @@ const TimelineTitle = styled.h1`
         }
     }
 `
-
-
-
-
-

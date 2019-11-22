@@ -4,9 +4,8 @@ import colors from '../Styled/colors'
 
 export default function Background() {
     return (
-        <BackgroundContainer>
-            <BackgroundFilter />
-            <BackgroundImage src={'/imgs/background.jpg'} />
+        <BackgroundContainer>  
+            <BackgroundImage src={'/imgs/bg.jpeg'} />
         </BackgroundContainer>
     )
 }
@@ -59,12 +58,12 @@ const BackgroundImage = styled.img`
     z-index: -4;
 `
 
-const BackgroundFilter = styled.div`
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    opacity: .9;
-    z-index: 1;
-    background: ${colors().blueGradient};
-`
+// const BackgroundFilter = styled.div`
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     opacity: .9;
+//     z-index: 1;
+//     background: ${colors().blueGradient};
+// `

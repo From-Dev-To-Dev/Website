@@ -91,6 +91,7 @@ const ButtonContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    margin-bottom: 50px;
 
     @media screen and (min-width: 600px){
         font-size: 1.3em;    

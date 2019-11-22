@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import  { DiGithubBadge } from 'react-icons/di'
+import  { TiSocialFacebookCircular, TiSocialInstagram } from 'react-icons/ti'
 
 export default function TimelineDescription() {
   return (
@@ -23,10 +24,10 @@ export default function TimelineDescription() {
             <DiGithubBadge size={50} />
           </SocialButton>
           <SocialButton href="#22">
-            <DiGithubBadge size={50} />
+            <TiSocialFacebookCircular size={50} />
           </SocialButton>
           <SocialButton href="#22">
-            <DiGithubBadge size={50} />
+            <TiSocialInstagram size={50} />
           </SocialButton>
         </DescriptionSocial>
       </DescriptionInfo>

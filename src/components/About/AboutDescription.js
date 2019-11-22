@@ -15,9 +15,8 @@ export default function AboutDescription() {
             </DescriptionTextContainer>
 
             <DescriptionImagesContainer>
-                <DescriptionImage src={'https://picsum.photos/850/900/?gravity=west'} />
-                <DescriptionImage src={'https://picsum.photos/850/900/?gravity=west'} />
-                <DescriptionImage src={'https://picsum.photos/850/900/?gravity=west'} />
+                <img src={'https://firebasestorage.googleapis.com/v0/b/from-dev-to-dev.appspot.com/o/container.png?alt=media&token=d35ee69b-c842-465b-b9f3-b2a246d3dd2c'} alt="img"/>
+                
             </DescriptionImagesContainer>
 
         </DescriptionContainer>
@@ -29,6 +28,11 @@ const DescriptionContainer = styled(Column)`
     width: 100%;
     padding: 30px;
     background: linear-gradient(0deg, rgba(101,61,191,1) 17%, rgba(26,93,192,1) 100%);
+
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
 
     @media screen and (min-width: 800px){
         background: ${colors().white};
@@ -133,159 +137,158 @@ const DescriptionImagesContainer = styled.div`
 
 `
 
-const DescriptionImage = styled.img`
-    width: 135px;
-    height: 135px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
-    position: absolute;
-    transition: all .5s;
-    outline: .2rem solid transparent;
+// const DescriptionImage = styled.img`
+//     width: 135px;
+//     height: 135px;
+//     /* box-shadow: 0 15px 40px rgba(0, 0, 0, .4); */
+//     position: absolute;
+//     transition: all .5s;
+//     outline: .2rem solid transparent;
     
-    &:before{
-        content: '';
-        z-index: 5;
-        opacity: 1;
-        background: ${colors().primaryColor};
-    }
+//     &:before{
+//         content: '';
+//         z-index: 5;
+//         opacity: 1;
+//         background: ${colors().primaryColor};
+//     }
 
-    &:hover{
-        transform: scale(1.2);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
-        outline-offset: 10px;
-        outline: .2rem solid ${colors().secondaryColor};
-    }
+//     &:hover{
+//         transform: scale(1.2);
+//         box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+//         /* outline-offset: 10px;
+//         outline: .2rem solid ${colors().secondaryColor}; */
+//     }
 
-    @media screen and (min-width: 1220px){
-        width: 179px;
-        height: 130px;
-    }
+//     @media screen and (min-width: 1220px){
+//         width: 179px;
+//         height: 130px;
+//     }
 
-    @media screen and (min-width: 1360px){
-        width: 230px;
-        height: 160px;
-    }
+//     @media screen and (min-width: 1360px){
+//         width: 230px;
+//         height: 160px;
+//     }
     
-    &:nth-child(1){
-        right: 30px;
-        bottom: 30px;
-        z-index: 1;
+//     &:nth-child(1){
+//         right: 30px;
+//         bottom: 30px;
+//         z-index: 1;
 
-        &:hover{
-            z-index: 20;
-        }
+//         &:hover{
+//             z-index: 20;
+//         }
        
-        @media screen and (min-width: 830px){
-            right: 100px;
-        }
+//         @media screen and (min-width: 830px){
+//             right: 100px;
+//         }
 
-        @media screen and (min-width: 930px){
-            right: 135px;
-        }
+//         @media screen and (min-width: 930px){
+//             right: 135px;
+//         }
 
-        @media screen and (min-width: 1024px){
-            right: 180px;
-        }
+//         @media screen and (min-width: 1024px){
+//             right: 180px;
+//         }
 
-        @media screen and (min-width: 1090px){
-            right: 250px;
-        }
+//         @media screen and (min-width: 1090px){
+//             right: 250px;
+//         }
 
-        @media screen and (min-width: 1220px){
-            right: 240px;
-        }
+//         @media screen and (min-width: 1220px){
+//             right: 240px;
+//         }
 
-        @media screen and (min-width: 1360px){
-            right: 190px;
-        }
+//         @media screen and (min-width: 1360px){
+//             right: 190px;
+//         }
 
-        @media screen and (min-width: 1440px){
-            right: 90px;
-        }
+//         @media screen and (min-width: 1440px){
+//             right: 90px;
+//         }
 
-        @media screen and (min-width: 1600px){
-            right: 210px;
-        }
+//         @media screen and (min-width: 1600px){
+//             right: 210px;
+//         }
 
-        @media screen and (min-width: 1760px){
-            right: 200px;
-        }
-    }
+//         @media screen and (min-width: 1760px){
+//             right: 200px;
+//         }
+//     }
 
-    &:nth-child(2){
-        left: 105px;
-        top: 0;
-        z-index: 3;
+//     &:nth-child(2){
+//         left: 105px;
+//         top: 0;
+//         z-index: 3;
 
-        &:hover{
-            z-index: 20;
-        }
+//         &:hover{
+//             z-index: 20;
+//         }
 
-        @media screen and (min-width: 1450px){
-            left: 180px;
-        }
+//         @media screen and (min-width: 1450px){
+//             left: 180px;
+//         }
 
-        @media screen and (min-width: 1360px){
-            left: 150px;
-        }
+//         @media screen and (min-width: 1360px){
+//             left: 150px;
+//         }
 
-        @media screen and (min-width: 1360px){
-            left: 100px;
-        }
+//         @media screen and (min-width: 1360px){
+//             left: 100px;
+//         }
 
-        @media screen and (min-width: 1600px){
-            left: 130px;
-        }
+//         @media screen and (min-width: 1600px){
+//             left: 130px;
+//         }
 
-        @media screen and (min-width: 1680px){
-            left: 170px;
-        }
+//         @media screen and (min-width: 1680px){
+//             left: 170px;
+//         }
 
-        /* @media screen and (min-width: 1760px){
-            left: 270px;
-        } */
-    }
+//         /* @media screen and (min-width: 1760px){
+//             left: 270px;
+//         } */
+//     }
 
-    &:nth-child(3){
-        right: 40px;
-        top: 70px;
-        z-index: 2;
+//     &:nth-child(3){
+//         right: 40px;
+//         top: 70px;
+//         z-index: 2;
 
-        &:hover{
-            z-index: 20;
-        }
+//         &:hover{
+//             z-index: 20;
+//         }
 
 
-        @media screen and (min-width: 830px){
-            right: 90px;
-        }
+//         @media screen and (min-width: 830px){
+//             right: 90px;
+//         }
 
-        @media screen and (min-width: 930px){
-            right: 140px;
-        }
+//         @media screen and (min-width: 930px){
+//             right: 140px;
+//         }
 
-        @media screen and (min-width: 1024px){
-            right: 190px;
-        }
+//         @media screen and (min-width: 1024px){
+//             right: 190px;
+//         }
 
-        @media screen and (min-width: 1090px){
-            right: 240px;
-        }
+//         @media screen and (min-width: 1090px){
+//             right: 240px;
+//         }
 
-        @media screen and (min-width: 1220px){
-            right: 250px;
-        }
+//         @media screen and (min-width: 1220px){
+//             right: 250px;
+//         }
 
-        @media screen and (min-width: 1360px){
-            right: 150px;
-        }
+//         @media screen and (min-width: 1360px){
+//             right: 150px;
+//         }
 
-        @media screen and (min-width: 1440px){
-            right: 110px;
-        }
+//         @media screen and (min-width: 1440px){
+//             right: 110px;
+//         }
 
-        @media screen and (min-width: 1600px){
-            right: 150px;
-        }
-    }
-`
-
+//         @media screen and (min-width: 1600px){
+//             right: 150px;
+//         }
+//     }
+// `
